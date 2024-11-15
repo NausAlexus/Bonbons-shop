@@ -1,0 +1,288 @@
+const PRODUCT = {
+
+    assortiments: {
+
+        bonbons: [
+            {
+                id: 1,
+                title: "Bounty",
+                src: "https://i.ibb.co/X8xV7WM/bonbons-1.webp",
+                price: 12,
+                description: "A heavenly combination of fragrant coconut and delicate chocolate that will give you a moment of pleasure in every candy. Each sweet has a crunchy protective shell of delicate milk chocolate that hides a juicy and sweet coconut filling. This harmony of flavors is ideal for lovers of desserts with an exotic twist.",
+            },
+            {
+                id: 2,
+                title: "Cappuccino rum",
+                src: "https://i.ibb.co/kcwT7yw/bonbons-2.webp",
+                price: 10,
+                description: "An exquisite delicacy for true gourmets, which combines the rich taste of a strong cappuccino and the sweet notes of dark rum. Each candy strikes the perfect balance between the strength of coffee and the spicy warmth of rum. This delicate and aromatic filling will give you a moment of pleasure with every bite of the candy, awakening memories of cozy cafes and evening gatherings.",
+            },
+            {
+                id: 3,
+                title: "Ice cream cookies",
+                src: "https://i.ibb.co/hcRh15Q/bonbons-3.webp",
+                price: 10,
+                description: "A delicious treat that combines your favorite desserts. Each candy brings you the feeling of a summer holiday, combining the smooth taste of ice cream with the crunchy texture of freshly baked cookies. Wrapped in a velvety chocolate shell, these sweets surprise with their lightness and rich taste. The filling, reminiscent of your favorite ice cream, is framed by generations of tradition in which cookies give the sweetness an added charm.",
+            },
+            {
+                id: 4,
+                title: "Salted caramel",
+                src: "https://i.ibb.co/tqT23qv/bonbons-4.webp",
+                price: 12,
+                description: "A true delicacy for lovers of a sweet and salty combination. Each candy is the perfect balance between the rich sweetness of soft caramel and the subtle touch of salt that brings out its flavor. Wrapped in smooth chocolate, these sweets offer a delightful sense of textural contrast while the filling melts in your mouth, leaving an unmatched aftertaste.",
+            },
+            {
+                id: 5,
+                title: "Mango passion fruit",
+                src: "https://i.ibb.co/ydsrTD7/bonbons-5.webp",
+                price: 14,
+                description: "An exotic delicacy that will transport you to tropical plantations, where the sun shines brighter and fruits fill the air with a sweet aroma. Each candy combines the juicy sweetness of ripe mango and the bright acidity of passion fruit, creating an explosion of flavor that is delightful and refreshing. Wrapped in delicate chocolate, they are the perfect treat for lovers of fruit desserts.",
+            },
+            {
+                id: 6,
+                title: "Truffle",
+                src: "https://i.ibb.co/MVhc1qL/bonbons-6.webp",
+                price: 16,
+                description: "A real find for connoisseurs of gourmet delicacies. Each candy is a small masterpiece inspired by classic French truffles. The delicate and creamy filling, rich in delicious chocolate flavor, will give you true pleasure with every bite. Wrapped in thick dark chocolate and dusted with soft cocoa powder, these sweets not only delight the taste buds, but also attract the eye with their aesthetics.",
+            },
+            {
+                id: 7,
+                title: "Drunk cherry",
+                src: "https://i.ibb.co/NLrJ12h/bonbons-7.webp",
+                price: 14,
+                description: "An exquisite treat that combines the brightness of juicy cherries and subtle notes of alcohol to create an unforgettable delicious experience. Each candy is filled with a rich filling with berry effervescence, perfectly balanced with a slight sourness that adds freshness. Wrapped in luxurious dark chocolate, they not only delight the taste, but also delight with their appearance.",
+            },
+            {
+                id: 8,
+                title: "Black currant",
+                src: "https://i.ibb.co/TYY4WWs/bonbons-8.webp",
+                price: 10,
+                description: "A delicious delicacy that will take you to a world of freshness and juiciness. Each candy is filled with a bright and rich taste of ripe blackcurrant, which combines sweet and slightly sour notes, creating harmony for your taste buds. Wrapped in a silky chocolate shell, these sweets delight not only with a rich taste, but also with a delightful aroma, reminiscent of summer and sunny gardens.",
+            },
+            {
+                id: 9,
+                title: "Orange",
+                src: "https://i.ibb.co/Bw2BGqQ/bonbons-9.webp",
+                price: 12,
+                description: "A bright and sunny delicacy that will give you a boost of freshness and good mood. Each candy is filled with a juicy orange filling that combines the sweetness of ripe orange and light sourness, creating an amazing harmony of flavors. Wrapped in a delicate layer of chocolate, they are an ideal choice for those who appreciate fruit desserts.",
+            }
+        ],
+
+        chocolate: [
+            {
+                id: 10,
+                title: "Candied fruit",
+                src: "https://i.ibb.co/B4ztGxJ/chocolate-1.webp",
+                price: 25,
+                description: "A real holiday for those with a sweet tooth and lovers of delicious desserts! This chocolate bar delights with its variety: each bite fills you with bright notes of aromatic candied fruits, which give it a delicious sweetness and textural variety. Fine chocolate hugs the dried fruit pieces, creating a harmonious combination of softness and crunch.",
+            },
+            {
+                id: 11,
+                title: "Walnut",
+                src: "https://i.ibb.co/hXmyHGK/chocolate-2.webp",
+                price: 25,
+                description: "True perfection for connoisseurs of noble taste. Each bite of this chocolate bar gives you a rich, creamy texture, complemented by crunchy chopped hazelnuts that fill it with warmth and comfort. The perfectly balanced combination of deep chocolate aroma and delicate nutty aftertaste creates a real gourmet delight.",
+            },
+            {
+                id: 12,
+                title: "Marshmallow cracker",
+                src: "https://i.ibb.co/NSzgWS4/chocolate-3.webp",
+                price: 30,
+                description: "A sweet treat that will take you into the atmosphere of a cozy fire and summer evening gatherings. Each chocolate bar combines soft and fluffy marshmallows seamlessly intertwined with crunchy graham cracker pieces, creating the perfect balance of sweetness and texture. Wrapped in rich chocolate, this combination delivers the ultimate s'mores experience.",
+            },
+            {
+                id: 13,
+                title: "Pretzel",
+                src: "https://i.ibb.co/hBjmJCM/chocolate-4.webp",
+                price: 20,
+                description: "A unique delicacy that will give you a unique taste, combining sweet and salty notes in one piece. A thin layer of smooth chocolate frames the crunchy pretzel pieces, adding texture and a heavenly contrast in flavor. This chocolate bar is ideal for those who love unusual combinations and want to diversify their sweet moments.",
+            },
+            {
+                id: 14,
+                title: "Peanut banana",
+                src: "https://i.ibb.co/fSRTBP6/chocolate-5.webp",
+                price: 20,
+                description: "Perfection that combines two vibrant flavors into one delicious treat. The smooth banana cream and crunchy roasted peanut pieces complement each other perfectly, creating a harmony of sweetness and nutty flavor. Wrapped in rich chocolate, this chocolate bar will be a real find for lovers of unique combinations. With every bite, you'll enjoy the creamy texture and crunch while immersing yourself in an atmosphere of tropical comfort.",
+            },
+            {
+                id: 15,
+                title: "Cookie",
+                src: "https://i.ibb.co/LYZCQgP/chocolate-6.webp",
+                price: 30,
+                description: "A sweet treat that will take you to the world of home comfort and warmth. With every bite you will taste the taste of freshly baked cookies: crispy texture, sweet pieces of chocolate and notes of vanilla intertwine in this delicacy, creating a real symphony of pleasure. Wrapped in rich chocolate, this chocolate bar makes the perfect companion to your coffee or tea, adding a touch of nostalgia to every moment.",
+            },
+            {
+                id: 16,
+                title: "Strawberry",
+                src: "https://i.ibb.co/zr3MD7D/chocolate-7.webp",
+                price: 20,
+                description: "A bright delicacy that awakens summer memories and gives a feeling of freshness. The delicate, rich flavor of ripe strawberries harmonizes perfectly with smooth chocolate, creating a sweet and refreshing combination. Each slice fills your heart with joy and lightness, as if you were enjoying a juicy berry dessert.",
+            },
+        ],
+
+        bars: [
+            {
+                id: 17,
+                title: "Strawberries and cream",
+                src: "https://i.ibb.co/jyb2D6P/bars-1.webp",
+                price: 16,
+                description: "A delicious treat that combines the freshness of sweet strawberries and the softness of airy cream. The smooth layer of creamy strawberry filling melts in your mouth for a light and indulgent sensation, while the crunchy chocolate shell adds texture and richness. These bars are perfect for any occasion, whether it's a morning snack or a sweet addition to a night out with friends.",
+            },
+            {
+                id: 18,
+                title: "Raspberry",
+                src: "https://i.ibb.co/j888Vpk/bars-2.webp",
+                price: 15,
+                description: "A bright and juicy treat that immerses you in a world of fresh berry delights. Each bar is filled with rich raspberry cream that intertwines harmoniously with a smooth chocolate shell, creating the perfect balance of sweet and sour. The flavor of ripe raspberries awakens the taste buds and energizes you, while the crunchy texture adds an addictive kick.",
+            }, 
+            {
+                id: 19,
+                title: "Ice cream",
+                src: "https://i.ibb.co/mJxxCRQ/bars-3.webp",
+                price: 17,
+                description: "A tender and creamy treat that brings back sweet childhood memories. Inside each bar there is an airy filling with a rich ice cream taste that smoothly melts in the mouth, filling it with creamy tenderness. Wrapped in a thin layer of flavorful chocolate, these bars create the perfect combination of sweetness and warm harmony.",
+            }, 
+            {
+                id: 20,
+                title: "Cherry",
+                src: "https://i.ibb.co/Y314w1v/bars-4.webp",
+                price: 15,
+                description: "A real explosion of berry flavor that instantly captivates you into a world of freshness and brightness. Each bar is filled with aromatic cherry cream, which amazingly combines the sweetness and light sourness of ripe cherries. Wrapped in rich chocolate, these bars offer a unique taste and texture that delivers delight with every bite.",
+            }, 
+            {
+                id: 21,
+                title: "Pistachio chocolate",
+                src: "https://i.ibb.co/983yz0S/bars-5.webp",
+                price: 15,
+                description: "An exquisite delicacy that combines the delicate taste of creamy chocolate and a bright note of roasted pistachios. Each bar is filled with a creamy filling rich in nutty flavor that perfectly complements the sweetness of the chocolate shell. The crunchy pistachio pieces add texture and flavor, making every bite even more enjoyable.",
+            }, 
+            {
+                id: 22,
+                title: "Cappuccino",
+                src: "https://i.ibb.co/gFgJr34/bars-6.webp",
+                price: 20,
+                description: "An ideal treat for true coffee connoisseurs! Each bar offers a delicious combination of smooth chocolate and rich cappuccino flavor that encourages you to savor every moment. The delicate filling with a bright coffee aroma creates the feeling of morning coffee in the warm atmosphere of a cafe, and the thin chocolate shell adds sweetness and chic.",
+            }, 
+            {
+                id: 23,
+                title: "Milky Way",
+                src: "https://i.ibb.co/JrNXZ83/bars-7.webp",
+                price: 20,
+                description: "A real cosmic sweetness that will take you to a world of tenderness and gastronomic bliss! Each bar combines a fluffy, soft caramelized milk filling and light, creamy marshmallows, wrapped in a layer of rich milk chocolate. This perfect combination gives a feeling of lightness and sweetness that melts in your mouth like a jewel.",
+            }, 
+            {
+                id: 24,
+                title: "Milk chocolate",
+                src: "https://i.ibb.co/6JvM8Hr/bars-8.webp",
+                price: 15,
+                description: "A classic that never gets old! Each bar is filled with a rich and velvety filling that perfectly balances sweetness and light creaminess. Wrapped in a rich milk chocolate shell, it delivers a unique experience with every bite.",
+            }, 
+            {
+                id: 25,
+                title: "Lychee plums",
+                src: "https://i.ibb.co/qyzrFDy/bars-9.webp",
+                price: 17,
+                description: "An unusual and exotic delicacy that will give you an unforgettable taste sensation! Each bar combines the delicate sweetness of creamy chocolate with the refreshing, fruity flavor of lychee, creating a unique balance between sweetness and slight sourness. The soft filling, rich in juicy flavor, wrapped in a thin layer of chocolate shell, gives true pleasure in every bite.",
+            },
+        ],
+
+        nut_butters: [
+            {
+                id: 26,
+                title: "Peanut",
+                src: "https://i.ibb.co/fp2R5yD/batter-1.webp",
+                price: 25,
+                description: "A delicious delicacy that will win your heart from the first bite! The smooth and creamy texture is ideal for spreading on bread, adding to smoothies or as an ingredient in baking. Peanut butter has a rich, nutty flavor that perfectly balances sweetness and salt, creating a harmony of flavors.",
+            },
+            {
+                id: 27,
+                title: "Hazelnut",
+                src: "https://i.ibb.co/Q604G1c/batter-2.webp",
+                price: 25,
+                description: "A true delight for lovers of nut delicacies! With a smooth and creamy texture, it's perfect for spreading on toast, adding to desserts, or simply enjoying with a spoon. The rich, sweet taste of roasted hazelnuts fills each serving with warmth and comfort, creating harmony between richness and lightness.",
+            },
+            {
+                id: 28,
+                title: "From pumpkin seeds",
+                src: "https://i.ibb.co/SJb0RRc/batter-3.webp",
+                price: 40,
+                description: "A unique and nutritious treat that will surprise you with its rich taste and creamy texture. Made from fresh pumpkin seeds, this spread has a bright, nutty flavor and a slightly sweet note, making it the perfect addition to breads, smoothies, desserts or salads. It is rich in antioxidants, vitamins and minerals, making it an excellent choice for health and well-being.",
+            },
+            {
+                id: 29,
+                title: "Almond",
+                src: "https://i.ibb.co/t82VbZf/batter-4.webp",
+                price: 50,
+                description: "A luxurious delicacy that will delight you with its delicate taste and velvety texture. Made from selected roasted almonds, it has a lightly sweet aroma with subtle notes of nutty bliss. This spread is ideal for spreading on toast, adding to desserts and smoothies, or as a snack on its own.",
+            },
+            {
+                id: 30,
+                title: "Pistachio",
+                src: "https://i.ibb.co/SJhChzZ/batter-5.webp",
+                price: 50,
+                description: "An exquisite delicacy that fascinates with its unusual taste and bright green hue. Made from select roasted pistachios, this spread has a rich, nutty flavor and subtle sweetness, making it an ideal addition to a variety of dishes. It's perfect for spreading on toast, adding to desserts, smoothies, or as a delicious ingredient in culinary masterpieces.",
+            },
+        ],
+
+        gift_sets: [
+            {
+                id: 31,
+                title: "For you",
+                src: "https://i.ibb.co/gFrHkTQ/set-1.webp",
+                price: 45,
+                description: "An amazing sweet treat created with love and care. Each candy in this set is a unique combination of delicate flavors and aromas, from classic chocolate to exotic fruit. Packaged in a stylish box, this set will be the perfect gift for those near and dear to you.",
+            },
+            {
+                id: 32,
+                title: "Big bonbons",
+                src: "https://i.ibb.co/BLb6HqS/set-2.webp",
+                price: 100,
+                description: "A real sweet delight for true confectionery delicacy lovers! Each candy in this set is bursting with vibrant flavors and smooth textures that will effortlessly win your heart. The combination of high-quality chocolate, original fillings and creative design makes this set an ideal choice for holidays, gifts and just to please yourself.",
+            },
+            {
+                id: 33,
+                title: "Refined",
+                src: "https://i.ibb.co/DfJ5xcb/set-3.webp",
+                price: 35,
+                description: "A magnificent collection of sweets, created for true connoisseurs of gourmet taste. Each candy in this exquisite set is not just a treat, but a true work of art that combines subtle aromas and refined textures. Skillfully selected filling and coating make it harmonize on the palate, offering bright flavor combinations, from classic chocolate to exotic fruits and spices.",
+            },
+            {
+                id: 34,
+                title: "Classical",
+                src: "https://i.ibb.co/VQrC3h8/set-4.webp",
+                price: 40,
+                description: "A perfect combination of timeless flavors that returns to the traditions of the best confectionery creations. In this set you will find familiar and favorite sweets, such as delicate chocolate with nuts, fruit lollipops and creamy carmels, which will delight every sweet tooth. Each candy is carefully selected and made from quality ingredients to provide you with maximum pleasure and enjoyment.",
+            },
+            {
+                id: 35,
+                title: "Gentle",
+                src: "https://i.ibb.co/Q6MhSzr/set-5.webp",
+                price: 35,
+                description: "A truly magical treat, created for those who appreciate romance and delicacy in every detail. This set contains exquisite sweets with soft, melting textures and delicate flavors, such as light vanilla cream, airy fruity mousse and velvety chocolate. Each candy seems to embrace your senses and shimmer with pleasant aromas, giving unforgettable moments of pleasure.",
+            },
+            {
+                id: 36,
+                title: "Art",
+                src: "https://i.ibb.co/828MkPm/set-6.webp",
+                price: 80,
+                description: "A true masterpiece of sweet art that will delight not only gourmets, but also connoisseurs of aesthetics. Each candy in this set is crafted with great attention to detail and presented in a unique design that reflects creativity and originality. Inside, you'll find delicious combinations of flavors, from vibrant berry notes to exotic spiced chocolate, that will delight your taste buds.",
+            },
+            {
+                id: 37,
+                title: "Planets",
+                src: "https://i.ibb.co/6gJXDYM/set-7.webp",
+                price: 10,
+                description: "An amazing space journey for your taste buds! Each candy in this set represents a unique planet with mesmerizing colors and unusual flavors that will transport you to a world of galactic delights. From a sweet chocolate meteorite to a fruity companion, the variety of combinations will please even the most discerning sweet tooth.",
+            },
+            {
+                id: 38,
+                title: "Mini bonbons",
+                src: "https://i.ibb.co/0G4Lx6D/set-8.webp",
+                price: 15,
+                description: "A compilation of small masterpieces that are ideal for those who love delicate and delicious sweets! Each mini bonbon reveals a unique taste, be it delicate chocolate with fruit filling, creamy caramel or a refreshing mint surprise. Their compact size makes them ideal for a treat anytime - at home, at work or while traveling.",
+            },
+        ],
+    }
+};
+
+export default PRODUCT;

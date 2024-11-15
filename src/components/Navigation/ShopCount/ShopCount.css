@@ -1,0 +1,11 @@
+.shop-count {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 12px;
+    background: var(--brown-color);
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

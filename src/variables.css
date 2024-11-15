@@ -1,0 +1,14 @@
+:root {
+    --body-bg-color: #f1f1e4;
+    --main-bg-color: #cd3d15;
+    --product-bg-color: rgba(0, 0, 0, 0.432);
+    --link-bg-color: rgba(255, 255, 255, 0.797);
+    --link-hover-bg-color: rgba(255, 255, 255, 0.932);
+    
+    --brown-color: #5a3825;
+    --white-color: white;
+    --black-color: black;
+    --nav-color: #7c5740;
+    --nav-hover-color: #d3ba34;
+    --input-border-color: rgb(215, 215, 215);
+}

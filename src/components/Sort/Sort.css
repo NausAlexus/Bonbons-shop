@@ -1,0 +1,191 @@
+.Sort{
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 500px;
+    height: 100vh;
+    background-color: var(--body-bg-color);
+    color: rgb(124, 87, 64);
+    z-index: 2000;
+    transition: transform 0.4s ease;
+}
+.sort-header h2{
+    font-weight: 600;
+    font-size: 20px;
+}
+.sort-header{
+    height: 80px;
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0 30px;
+    flex-direction: column;
+    justify-content: center;
+}
+.sort-header svg{
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+@media(min-width: 1024px){
+    .sort-header svg:hover{
+        scale: 1.3;
+    }
+}
+.sort-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cover-sort{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 20;
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1500;
+    top: 0;
+}
+.cover-sort-visible {
+    opacity: 1; 
+    visibility: visible;
+}
+.Sort-open {
+    transform: translateX(0); 
+
+}
+
+.Sort-closed {
+    transform: translateX(-100%);
+
+}
+
+.sort-count {
+    color: var(--nav-color);
+    font-weight: 100;
+}
+.sort-content{
+    padding: 0 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.sort-content-title{
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+}
+.sort-max-price{
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.sort-price-select{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.sort-value input{
+    margin-left: 10px;
+    width: 90%;
+    height: 45px;
+    border: 1px solid var(--input-border-color);
+    max-width: 100%;
+    background: transparent;
+    padding-left: 20px;
+    color: var(--nav-color);
+    font-weight: 300;
+}
+.sort-max-value {
+    margin-left: 20px;
+}
+.sort-value input::placeholder {
+    color: var(--nav-color);
+    opacity: 1;
+    font-weight: 300;
+}
+.sort-value input::-webkit-outer-spin-button,
+.sort-value input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.sort-value{
+    display: flex;
+    align-items: center;
+}
+.sort-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0 30px;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 100%;
+}
+.sort-btn-1{
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+@media(min-width: 1024px){
+    .sort-btn-1:hover {
+        color: var(--nav-hover-color);
+    }
+}
+
+.sort-btn-2 {
+    cursor: pointer;
+    background-color: var(--main-bg-color);
+    height: 45px;
+    width: 200px;
+    border-radius: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+@media(min-width: 1024px){
+    .sort-btn-2:hover {
+        background-color: rgb(169, 54, 22);
+    }
+}
+
+.sort-range {
+    margin-top: 10px;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    background: var(--brown-color);
+    outline: none;
+    border-radius: 10px;
+}
+
+.sort-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--nav-hover-color);
+    border: 2px solid var(--main-bg-color); /* Белая рамка вокруг ползунка */
+    border-radius: 50%; /* Скругленные края */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+
+
+/* Адаптируем под разрешение от 425 до 768px */
+@media (max-width: 768px) {
+    .Sort{
+        width: 100%;
+    }
+}

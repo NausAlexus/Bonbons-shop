@@ -1,0 +1,215 @@
+.production-footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.production-content {
+    padding-top: 10px;
+    background: var(--main-bg-color);
+}
+.production-title {
+    margin-top: 50px;
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--nav-color);
+    text-align: center;
+}
+.production-text {
+    max-width: 60vw;
+    font-size: 20px;
+    color: var(--nav-color);
+    text-align: center;
+    margin-top: 10px;
+}
+.production-content-conatainer-1 {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.production-img-1 {
+    width: 50vw;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.production-about-1 {
+   margin: 0 auto;
+}
+.production-about-text1-1 {
+    color: var(--white-color);
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+.production-about-text2-1 {
+    color: var(--white-color);
+    font-size: 20px;
+    margin-top: 16px;
+    max-width: 40vw;
+    font-weight: 100;
+}
+.production-about-title-1 {
+    color: var(--white-color);
+    font-size: 34px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+.production-content-conatainer-2 {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.production-img-2 {
+    width: 50vw;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.production-about-2 {
+   margin: 0 auto;
+}
+.production-about-text1-2 {
+    color: var(--white-color);
+    font-size: 20px;
+    letter-spacing: 5px;
+    max-width: 30vw;
+}
+.production-about-text2-2 {
+    color: var(--white-color);
+    font-size: 20px;
+    margin-top: 16px;
+    max-width: 40vw;
+    font-weight: 100;
+}
+.production-about-title-2 {
+    color: var(--white-color);
+    font-size: 34px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+.production-content-conatainer-3 {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.production-img-3 {
+    width: 50vw;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.production-about-3 {
+   margin: 0 auto;
+}
+.production-about-text2-3 {
+    color: var(--white-color);
+    font-size: 20px;
+    margin-top: 16px;
+    max-width: 40vw;
+    font-weight: 100;
+}
+.production-about-title-3 {
+    color: var(--white-color);
+    font-size: 34px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+
+
+/* Адаптируем под разрешение от 1024 до 1400px */
+@media (max-width: 1400px) {
+    .production-about-1 {
+        max-width: 40vw;
+    }
+    .production-about-2 {
+        max-width: 40vw;
+    }
+     .production-about-3 {
+        max-width: 40vw;
+    }
+}
+
+/* Адаптируем под разрешение от 425 до 768px */
+@media (max-width: 768px) {
+    .production-title {
+        font-size: 28px;
+    }
+    .production-text {
+        font-size: 18px;
+        max-width: 90%;
+    }
+    .production-content-conatainer-1,
+    .production-content-conatainer-2,
+    .production-content-conatainer-3 {
+        margin-top: 60px;
+        flex-direction: column;
+    }
+    .production-img-2 {
+        order: 1;
+    }
+    .production-about-2 {
+        order: 2;
+    }
+    .production-img-1,
+    .production-img-2,
+    .production-img-3 {
+        width: 90%;
+        border-radius: 30px;
+    }
+    .production-about-1,
+    .production-about-2,
+    .production-about-3 {
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .production-about-text1-1,
+    .production-about-text1-2 {
+        font-size: 14px;
+        margin-top: 20px;
+        letter-spacing: 4px;
+        text-align: center;
+        max-width: 90%;
+    }
+    .production-about-title-1,
+    .production-about-title-2,
+    .production-about-title-3 {
+        font-size: 28px;
+        text-align: center;
+    }
+    .production-about-text2-1,
+    .production-about-text2-2,
+    .production-about-text2-3 {
+        max-width: 100%;
+    }
+
+}
+
+/* Адаптируем под разрешение до 425px */
+@media (max-width: 425px) {
+    .production-text {
+        font-size: 18px;
+        max-width: 98%;
+    }
+    .production-content-conatainer-1,
+    .production-content-conatainer-2,
+    .production-content-conatainer-3 {
+        margin-top: 20px;
+    }
+    .production-img-1,
+    .production-img-2,
+    .production-img-3 {
+        width: 98%;
+        border-radius: 20px;
+    }
+    .production-about-1,
+    .production-about-2,
+    .production-about-3 {
+        max-width: 98%;
+    }
+    .production-about-text1-1,
+    .production-about-text1-2 {
+        min-width: 98%;
+    }
+}

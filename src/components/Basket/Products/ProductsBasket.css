@@ -1,0 +1,60 @@
+.Basket-content{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    overflow-y: auto;
+    height: calc(100% - 200px);
+}
+.basket-img{
+    width: 130px;
+    height: 90px;
+    object-fit: cover;
+}
+.basket-item{
+    display: flex;
+    gap: 20px;
+
+}
+.basket-title{
+    font-weight: 500;
+}
+.basket-title-content{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+.basket-not-products{
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.basket-not-products svg{
+    font-size: 100px;
+}
+.basket-not-products p {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+
+/* Адаптируем под разрешение от 425 до 768px */
+@media (max-width: 768px) {
+    .Basket-content{
+    padding: 10px;
+    }
+    .basket-item{
+        justify-content: center;
+    }
+}
+
+/* Адаптируем под разрешение до 425px */
+@media (max-width: 425px) {
+    .Basket-content{
+        padding: 4px;
+    }
+}

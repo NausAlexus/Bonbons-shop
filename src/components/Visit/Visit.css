@@ -1,0 +1,12 @@
+.visit-container {
+    height: 40px;
+    width: 100%;
+    background: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.visit-text {
+    color: var(--white-color);
+    opacity: 0.7;
+}

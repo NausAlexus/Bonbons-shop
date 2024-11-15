@@ -1,0 +1,245 @@
+.Form {
+    position: fixed;
+    z-index: 3000;
+    background-color: var(--body-bg-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 640px;
+    width: 70%;
+    padding: 50px;
+    display: none;
+    align-items: center;
+    border-radius: 30px;
+    justify-content: center;
+}
+
+.form-open {
+    display: flex;
+}
+
+.form-closed {
+    display: none;
+}
+.cover-form{
+    position: absolute;
+    width: 100%;
+    height: 101%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 20;
+    transition: all 0.3s ease;
+    z-index: 1500;
+    top: 0;
+  }
+
+.form-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: var(--nav-color);
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.form-container {
+    color: var(--nav-color);
+    width: 100%;
+}
+
+@media(min-width: 1024px){
+    .form-close:hover {
+        transform: scale(1.3);
+    }
+}
+
+.form-not-products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-not-products svg{
+    font-size: 100px;
+}
+.form-not-products p {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.form-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-title {
+    font-size: 34px;
+}
+.form-radio {
+    margin-top: 10px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.form-radio label {
+    display: flex;
+    cursor: pointer;
+}
+.underlined {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.form-input {
+    width: 90%;
+    height: 35px;
+    margin-top: 10px;
+    padding-left: 10px;
+    border-radius: 30px;
+    border: none;
+    background: var(--nav-hover-color);
+    color: var(--white-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+.form-input:focus {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+.form-input::placeholder {
+    color: var(--white-color);
+    opacity: 0.7; 
+}
+
+.form-user-text{
+    max-height: 150px;
+    min-height: 70px;
+    max-width: 90%;
+    min-width: 50%;
+    padding: 10px;
+}
+.form-submit {
+    cursor: pointer;
+    margin-top: 20px;
+    height: 40px;
+    width: 120px;
+    border-radius: 40px;
+    border: none;
+    background-color: rgb(211, 186, 52);
+    color: white;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+@media(min-width: 1024px){
+    .form-submit:hover{
+        background-color: rgb(84, 78, 47);
+    }
+}
+
+
+.form-message {
+    margin-top: 10px;
+    color: green;
+}
+
+.form-message.error {
+    color: red; 
+}
+.form-message-true{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* Адаптируем под разрешение от 1400 до 1600px */
+@media (max-width: 1600px) {
+    .Form {
+        height: 540px;
+        width: 70%;
+        padding: 30px;
+    }
+}
+
+/* Адаптируем под разрешение от 1024 до 1400px */
+@media (max-width: 1400px) {
+    .Form {
+        height: 440px;
+        width: 76%;
+        padding: 30px;
+    }
+}
+
+/* Адаптируем под разрешение от 768 до 1024px */
+@media (max-width: 1024px) {
+    .Form {
+        height: 400px;
+        width: 96%;
+    }
+    .form-title {
+        font-size: 28px;
+    }
+}
+
+/* Адаптируем под разрешение от 425 до 768px */
+@media (max-width: 768px) {
+    .Form {
+        height: 300px;
+        width: 96%;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    .form-title {
+        font-size: 20px;
+    }
+    .form-input {
+        height: 30px;
+        font-size: 14px;
+    }
+    .form-submit {
+        margin-top: 14px;
+        height: 35px;
+        width: 120px;
+    }
+    .form-user-text{
+        max-height: 70px;
+        min-height: 50px;
+    }
+    .form-radio {
+        width: 70%;
+    }
+}
+
+/* Адаптируем под разрешение до 425px */
+@media (max-width: 425px) {
+    .Form {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+    .form-title {
+        font-size: 24px;
+    }
+    .form-input {
+        width: 96%;
+        height: 35px;
+        margin-top: 14px;
+        font-size: 16px;
+    }
+    .form-user-text{
+        max-width: 96%;
+    }
+    .form-radio {
+        width: 90%;
+    }
+    .form-submit {
+        margin-top: 20px;
+        height: 45px;
+        width: 120px;
+    }
+}

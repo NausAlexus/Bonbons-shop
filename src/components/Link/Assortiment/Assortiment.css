@@ -1,0 +1,135 @@
+.slider1-title {
+    font-size: 34px;
+    font-weight: 600;
+    margin-top: 50px;
+    color: var(--nav-color);
+    text-align: center;
+}
+
+.slider1-text {
+    font-size: 20px;
+    color: var(--nav-color);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.assortiment-grid-container {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.assortiment-img-wrapper{
+    width: 100%;
+    height: 550px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@media(min-width: 1024px){
+    .assortiment-img-wrapper:hover{
+        .assortiment-img {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.assortiment-img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.assortiment-link {
+    font-size: 28px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    text-decoration: none;
+    color: inherit;
+    background-color: var(--link-bg-color);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: background 0.3s ease;
+}
+
+.assortiment-link-ico {
+    transition: transform 0.3s ease;
+}
+
+@media(min-width: 1024px){
+    .assortiment-link:hover {
+        background: var(--link-hover-bg-color);
+        .assortiment-link-ico{
+            transform: translateX(8px);
+        }
+    }
+}
+
+
+
+
+/* Адаптируем под разрешение от 1400 до 1600px */
+@media (max-width: 1600px) {
+    .assortiment-link {
+        font-size: 20px;
+    }
+    .assortiment-img-wrapper{
+        height: 410px;
+    }
+}
+
+/* Адаптируем под разрешение от 1024 до 1400px */
+@media (max-width: 1400px) {
+    .assortiment-img-wrapper{
+        height: 360px;
+    }
+}
+
+/* Адаптируем под разрешение от 768 до 1024px */
+@media (max-width: 1024px) {
+    .assortiment-img-wrapper{
+        height: 300px;
+    }
+}
+
+/* Адаптируем под разрешение от 425 до 768px */
+@media (max-width: 768px) {
+    .assortiment-grid-container {
+        margin: 30px 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+    .assortiment-img-wrapper{
+        height: 280px;
+    }
+    .assortiment-link {
+        padding: 10px;
+        border-radius: 7px;
+    }
+}
+
+/* Адаптируем под разрешение до 425px */
+@media (max-width: 425px) {
+    .slider1-title {
+        font-size: 28px;
+    }
+    
+    .slider1-text {
+        font-size: 16px;
+    }
+    .assortiment-grid-container {
+        margin: 30px 10px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+    }
+}

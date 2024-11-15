@@ -1,0 +1,54 @@
+.counter-basket-content{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.counter-basket{
+    width: 80px;
+    height: 35px;
+    border: 1px solid var(--nav-color);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+}
+
+.counter-basket-content button{
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+}
+
+@media(min-width: 1024px){
+    .counter-basket-content button:hover{
+        opacity: 1;
+        scale: 1.2;
+    }
+}
+
+.delete-product{
+    cursor: pointer;
+    transition: color 0.3s ease,
+                transform 0.3s ease;
+}
+
+@media(min-width: 1024px){
+    .delete-product:hover{
+        transform: scale(1.15);
+        color: var(--nav-hover-color);
+    }
+}
+
+
+/* Адаптируем под разрешение до 425px */
+@media (max-width: 425px) {
+    .counter-basket-content{
+        gap: 10px;
+    }
+}

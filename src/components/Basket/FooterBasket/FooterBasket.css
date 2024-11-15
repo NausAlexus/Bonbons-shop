@@ -1,0 +1,33 @@
+.basket-footer{
+    height: 120px;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--body-bg-color);
+    
+
+}
+
+.price-basket-footer{
+    height: 50px;
+    width: 220px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--nav-hover-color);
+    color: var(--white-color);
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+@media(min-width: 1024px){
+    .price-basket-footer:hover{
+        background-color: rgb(84, 78, 47);
+    }
+}
