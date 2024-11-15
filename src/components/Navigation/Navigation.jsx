@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { LuMenu } from "react-icons/lu";
 import { useState } from 'react';
 import { RxCross1 } from "react-icons/rx";
+import logo from "../../../public/logo.svg";
 
 
 function Navigation({ openBasket, totalItems }) {
@@ -18,7 +19,7 @@ function Navigation({ openBasket, totalItems }) {
     return (
         <div className='nav-container'>
             <div className='logo-container'>
-                <Link to='/'><img className='logo' src="../../../public/logo.svg" alt="Logo" /></Link>
+                <Link to='/'><img className='logo' src={logo} alt="Logo" /></Link>
                 <div className='shop-container'>
                     <CiShoppingBasket className='shop-icon' onClick={openBasket} />
                     <ShopCount totalItems={totalItems} />
