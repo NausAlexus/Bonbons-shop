@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { LuMenu } from "react-icons/lu";
 import { useState } from 'react';
 import { RxCross1 } from "react-icons/rx";
-import logo from "../../../public/logo.svg";
+import logo from "../../img/logo.svg";
 
 
 function Navigation({ openBasket, totalItems }) {

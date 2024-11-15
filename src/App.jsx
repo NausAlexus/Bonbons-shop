@@ -14,7 +14,6 @@ import Form from './components/Main/Form/Form';
 function App() {
     const location = useLocation();
     const assortiments = PRODUCT.assortiments;
-
     const [isBasketOpen, setIsBasketOpen] = useState(false);
     const [isSortOpen, setIsSortOpen] = useState(false);
     const [isFormOpen, setIsFormOpen] = useState(false);
@@ -28,6 +27,54 @@ function App() {
         nut_butters: assortiments.nut_butters,
         gift_sets: assortiments.gift_sets,
     });
+
+
+
+
+
+    const images = [
+        ...assortiments.bonbons.map(bonbon => bonbon.src),
+        ...assortiments.chocolate.map(choco => choco.src),
+        ...assortiments.bars.map(bar => bar.src),
+        ...assortiments.nut_butters.map(nutButter => nutButter.src),
+        ...assortiments.gift_sets.map(giftSet => giftSet.src),
+    ];
+
+    const [imagesLoaded, setImagesLoaded] = useState(false);
+
+    useEffect(() => {
+        setImagesLoaded(false); // сначала устанавливаем в false
+        let loadedImagesCount = 0;
+    
+        const handleImageLoad = () => {
+            loadedImagesCount += 1;
+            if (loadedImagesCount === images.length) {
+                setImagesLoaded(true);
+            }
+        };
+    
+        images.forEach(src => {
+            const img = new Image();
+            img.src = src;
+            img.onload = handleImageLoad;
+            img.onerror = handleImageLoad; // учтите возможные ошибки загрузки
+        });
+    }, [images]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const [totalPrice, setTotalPrice] = useState(0);
 
     const openBasket = () => setIsBasketOpen(true);
@@ -194,9 +241,21 @@ function App() {
                 console.log('Данные успешно отправлены в Telegram');
                 setFormMessage('Ваша заявка принята!');
                 setIsFormSubmitted(true);
+
+                setTimeout(() => {
+                    closeForm();
+                    window.location.reload();
+                }, 3000)
+
             } else {
                 console.error('Ошибка при отправке данных:', data.error);
                 setFormMessage('Ошибка при отправке данных. Пожалуйста, попробуйте снова.');
+
+                setTimeout(() => {
+                    closeForm();
+                    window.location.reload();
+                }, 3000)
+
             }
         })
         .catch(error => {
@@ -207,35 +266,41 @@ function App() {
 
     return (
         <>
-            <Visit />
-            <Basket
-                updateItemQuantity={updateItemQuantity}
-                deleteItem={deleteItem}
-                ItemData={ItemData}
-                BasketOpen={isBasketOpen}
-                closeBasket={closeBasket}
-                setTotalItems={setTotalItems}
-                openForm={openForm}
-                totalPrice={totalPrice}
-                setTotalPrice={setTotalPrice}
-            />
-            <Form 
-                deliveryOption={deliveryOption}
-                FormOpen={isFormOpen}
-                closeForm={closeForm}
-                ItemData={ItemData}
-                totalPrice={totalPrice}
-                getUserData={getUserData}
-                handleDeliveryChange={handleDeliveryChange}
-                handleSubmit={handleSubmit}
-                formMessage={formMessage}
-                isFormSubmitted={isFormSubmitted}
-            />
-            <Item itemValue={itemValue} closeItem={closeItem} addItemData={addItemData} openBasket={openBasket} />
-            <Sort SortOpen={isSortOpen} closeSort={closeSort} filterProductsByPrice={filterProductsByPrice} />
-            <Navigation openBasket={openBasket} totalItems={totalItems} />
-            <Main hendlItemValue={hendlItemValue} openSort={openSort} filteredProducts={filteredProducts[currentAssortimentKey]} />
-            <Footer />
+            {!imagesLoaded ? (
+                <div className="loader">Loading...</div> // Или ваш кастомный лоадер
+            ) : (
+                <>
+                    <Visit />
+                    <Basket
+                        updateItemQuantity={updateItemQuantity}
+                        deleteItem={deleteItem}
+                        ItemData={ItemData}
+                        BasketOpen={isBasketOpen}
+                        closeBasket={closeBasket}
+                        setTotalItems={setTotalItems}
+                        openForm={openForm}
+                        totalPrice={totalPrice}
+                        setTotalPrice={setTotalPrice}
+                    />
+                    <Form 
+                        deliveryOption={deliveryOption}
+                        FormOpen={isFormOpen}
+                        closeForm={closeForm}
+                        ItemData={ItemData}
+                        totalPrice={totalPrice}
+                        getUserData={getUserData}
+                        handleDeliveryChange={handleDeliveryChange}
+                        handleSubmit={handleSubmit}
+                        formMessage={formMessage}
+                        isFormSubmitted={isFormSubmitted}
+                    />
+                    <Item itemValue={itemValue} closeItem={closeItem} addItemData={addItemData} openBasket={openBasket} />
+                    <Sort SortOpen={isSortOpen} closeSort={closeSort} filterProductsByPrice={filterProductsByPrice} />
+                    <Navigation openBasket={openBasket} totalItems={totalItems} />
+                    <Main hendlItemValue={hendlItemValue} openSort={openSort} filteredProducts={filteredProducts[getCurrentAssortimentKey()]} /> 
+                    <Footer />
+                </>
+            )}
         </>
     );
 }

@@ -1,5 +1,5 @@
 import "./Footer.css";
-import Logo from "./../../../public/logo.svg";
+import Logo from "../../img/logo.svg"
 import { AiFillFacebook } from "react-icons/ai";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
