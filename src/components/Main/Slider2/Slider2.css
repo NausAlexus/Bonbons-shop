@@ -37,6 +37,7 @@
     height: 320px;
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
 }
 
 .slider2-item {

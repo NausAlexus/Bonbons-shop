@@ -5,6 +5,7 @@ import { HiMinus } from "react-icons/hi2";
 import { RxCross1 } from "react-icons/rx";
 
 const Item = ({itemValue, closeItem, addItemData, openBasket}) => {
+
     const [count,setCount] = useState(1);
 
     const handleMinus = () => {
