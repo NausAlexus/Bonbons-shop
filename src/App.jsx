@@ -64,7 +64,7 @@ function App() {
    
         setFilteredProducts(prevState => ({
             ...prevState,
-            [currentAssortimentKey]: filtered.length > 0 ? filtered : null
+            [currentAssortimentKey]: filtered.length > 0 ? filtered : []
         }));
     };
 
