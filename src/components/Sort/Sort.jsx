@@ -46,6 +46,7 @@ const Sort = ({ SortOpen, closeSort, filterProductsByPrice }) => {
 
 	const handleApply = () => {
         filterProductsByPrice(0, rangeValue);
+		closeSort()
     }
 
 	return (
